@@ -6,6 +6,7 @@ use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
+use jojoe77777\FormAPI;
 
 class Main extends PluginBase implements Listener{
 
@@ -62,7 +63,6 @@ class Main extends PluginBase implements Listener{
         $form->addToggle("§bBlau", false);
         $form->addToggle("§cRot",false);
         $form->addToggle("§eGelb", false);
-        $form->addToggle("Normal", false)
         $form->sendToPlayer($player);
         return $form;
     }
