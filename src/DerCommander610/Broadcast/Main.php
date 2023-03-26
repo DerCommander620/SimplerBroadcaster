@@ -55,10 +55,6 @@ class broadcast extends PluginBase implements Listener{
                 $this->getServer()->broadcastMessage("§6Server>> §e$data[0]");
                 return true;
             }
-            if($data[5] == true){
-                $this->getServer()->broadcastMessage("§6Server>> §f$data[0]");
-                return true;
-            }
             $this->getServer()->broadcastMessage("§6Server>> $data[0]");
         });
         $form->setTitle("§6Broadcast §eGUI");
