@@ -13,7 +13,7 @@ class Main extends PluginBase implements Listener{
 
     public function onEnable(): void 
     {
-        $this->getLogger->info("Broadcast angemacht!")
+        $this->getLogger->info("Broadcast angemacht!");
     }
 
     public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool{
