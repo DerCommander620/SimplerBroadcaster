@@ -6,6 +6,7 @@ use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
+use jojoe77777\FormAPI;
 
 class broadcast extends PluginBase implements Listener{
 
@@ -54,7 +55,10 @@ class broadcast extends PluginBase implements Listener{
                 $this->getServer()->broadcastMessage("§6Server>> §e$data[0]");
                 return true;
             }
-            $this->getServer()->broadcastMessage("§6Server>> ");
+            if($data[5] == true){
+                $this->getServer()->broadcastMessage("§6Server>> §f$data[0]")
+            }
+            $this->getServer()->broadcastMessage("§6Server>> $data[0]");
         });
         $form->setTitle("§6Broadcast §eGUI");
         $form->addInput("§a>> §bSchreibe eine nachricht hier rein");
@@ -62,6 +66,7 @@ class broadcast extends PluginBase implements Listener{
         $form->addToggle("§bBlau", false);
         $form->addToggle("§cRot",false);
         $form->addToggle("§eGelb", false);
+        $form->addToggle("Normal", false)
         $form->sendToPlayer($player);
         return $form;
     }
