@@ -18,7 +18,7 @@ class broadcast extends PluginBase implements Listener{
 
         switch($command->getName()){
             case "broadcast":
-             if($sender->hasPermission("core.broadcast.admin.cmd")){
+             if($sender->hasPermission("broadcast.cmd")){
                 if($sender instanceof Player){
                     $this->broadcast($sender);
                 }
