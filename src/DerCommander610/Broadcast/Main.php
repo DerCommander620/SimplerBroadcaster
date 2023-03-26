@@ -2,6 +2,7 @@
 
 namespace DerCommander610\Broadcast;
 
+use pocketmine\player\Player;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\event\Listener;
