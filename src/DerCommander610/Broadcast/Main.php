@@ -36,7 +36,7 @@ class broadcast extends PluginBase implements Listener{
                 return true;
             }
             if($data[0] == null){
-                $player->sendMessage("§cDu musst eine nachricht schreiben um alle eine nachricht zu senden!")
+                $player->sendMessage("§cDu musst eine nachricht schreiben um alle eine nachricht zu senden!");
                 return true;
             }
             if($data[1] == true) {
