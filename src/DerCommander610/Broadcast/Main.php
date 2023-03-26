@@ -10,7 +10,7 @@ use jojoe77777\FormAPI;
 
 class Main extends PluginBase implements Listener{
 
-    public function onEnable(){
+    public function onEnable(): void {
 
     }
 
