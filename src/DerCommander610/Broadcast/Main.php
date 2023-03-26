@@ -1,6 +1,6 @@
 <?php
 
-namespace KoDe\Commands;
+namespace DerCommander610\Broadcast;
 
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
