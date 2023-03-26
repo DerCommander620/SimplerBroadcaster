@@ -9,7 +9,7 @@ use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
 use jojoe77777\FormAPI;
 
-class Main extends PluginBase implements Listener{
+class Main extends PluginBase implements Listener {
 
     public function onEnable(): void 
     {
@@ -33,7 +33,7 @@ class Main extends PluginBase implements Listener{
 
     public function broadcast($player){
         $api = $this->getServer()->getPluginManager()->getPlugin("FormAPI");
-        $form = $api->createCustomForm(function (Player $player, array $data = null)){
+        $form = $api->createCustomForm(function (Player $player, array $data = null))
             if($data === null){
                 return true;
             }
