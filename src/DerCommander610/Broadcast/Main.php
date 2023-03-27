@@ -55,7 +55,7 @@ class Main extends PluginBase implements Listener {
                 $this->getServer()->broadcastMessage("§6Server>> §e$data[0]");
                 return true;
             }
-            $this->getServer()->broadcastMessage("§6Server>> $data[0]");
+            $this->getServer()->broadcastMessage("§cEin bestimmter broadcast konnte nicht gesendet werden!");
         });
         $form->setTitle("§6Broadcast §eGUI");
         $form->addInput("§a>> §bSchreibe eine nachricht hier rein");
