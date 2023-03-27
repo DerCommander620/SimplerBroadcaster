@@ -55,7 +55,11 @@ class Main extends PluginBase implements Listener {
                 $this->getServer()->broadcastMessage("§6Server>> §e$data[0]");
                 return true;
             }
-            $this->getServer()->broadcastMessage("§cEin bestimmter broadcast konnte nicht gesendet werden!");
+            if($data(5) == true){
+                $this->getServer()->broadcastMessage("§6Server>> §f$data[0]");
+                return true;
+            }
+            $this->getServer()->broadcastMessage("§cEin bestimmter broadcast konnte nicht gesendet werden! Farbe wurde nicht ausgewählt!");
         });
         $form->setTitle("§6Broadcast §eGUI");
         $form->addInput("§a>> §bSchreibe eine nachricht hier rein");
@@ -63,6 +67,7 @@ class Main extends PluginBase implements Listener {
         $form->addToggle("§bBlau", false);
         $form->addToggle("§cRot",false);
         $form->addToggle("§eGelb", false);
+        $form->addToggle("Normal", false);
         $form->sendToPlayer($player);
         return $form;
     }
