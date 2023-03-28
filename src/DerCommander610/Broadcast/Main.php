@@ -12,6 +12,9 @@ use jojoe77777\FormAPI;
 class Main extends PluginBase implements Listener {
 
     public function onEnable(): void {
+        @mkdir($this->getDataFolder());
+        $this->saveDefaultConfig();
+        $this->getResource("config.yml")
     }
 
     public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool{
@@ -57,7 +60,7 @@ class Main extends PluginBase implements Listener {
             }
             $this->getServer()->broadcastMessage("§cEin bestimmter broadcast konnte nicht gesendet werden! Farbe wurde nicht ausgewählt!");
         });
-        $form->setTitle($this->getConfig()->get("Title"));
+        $form->setTitle($this->getConfig()->get("title"));
         $form->addInput("§a>> §bSchreibe eine nachricht hier rein");
         $form->addToggle("§aGrün", false);
         $form->addToggle("§bBlau", false);
