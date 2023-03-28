@@ -14,7 +14,7 @@ class Main extends PluginBase implements Listener {
     public function onEnable(): void {
         @mkdir($this->getDataFolder());
         $this->saveDefaultConfig();
-        $this->getResource("config.yml")
+        $this->getResource("config.yml");
     }
 
     public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool{
