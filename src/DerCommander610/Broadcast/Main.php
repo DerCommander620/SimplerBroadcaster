@@ -26,7 +26,7 @@ class Main extends PluginBase implements Listener {
                     $this->broadcast($sender);
                 }
              } else {
-                $sender->sendMessage("§cDu hast keine rechte dazu!");
+                $sender->sendMessage("§cYou have not permission to use this command!!");
              }
         }
     return true;
@@ -39,7 +39,7 @@ class Main extends PluginBase implements Listener {
                 return true;
             }
             if($data[0] == null){
-                $player->sendMessage("§cDu musst eine nachricht schreiben um alle eine nachricht zu senden!");
+                $player->sendMessage("§cYou need to write a Message to send it to all Players!");
                 return true;
             }
             if($data[1] == true) {
@@ -58,14 +58,14 @@ class Main extends PluginBase implements Listener {
                 $this->getServer()->broadcastMessage("§6Server>> §e$data[0]");
                 return true;
             }
-            $this->getServer()->broadcastMessage("§cEin bestimmter broadcast konnte nicht gesendet werden! Farbe wurde nicht ausgewählt!");
+            $this->getServer()->broadcastMessage("§6Server>> ");
         });
         $form->setTitle($this->getConfig()->get("title"));
-        $form->addInput("§a>> §bSchreibe eine nachricht hier rein");
-        $form->addToggle("§aGrün", false);
-        $form->addToggle("§bBlau", false);
-        $form->addToggle("§cRot", false);
-        $form->addToggle("§eGelb", false);
+        $form->addInput("§a>> §bWrite a Message!");
+        $form->addToggle("§aGreen", false);
+        $form->addToggle("§bBlue", false);
+        $form->addToggle("§cRed", false);
+        $form->addToggle("§eYellow", false);
         $form->sendToPlayer($player);
         return $form;
     }
