@@ -1,11 +1,11 @@
-name: SimplerBroadcast
+name: SimplerBroadcaster
 version: 1.0.0
 main: DerCommander610\Broadcast\Main
 api: [4.17.0]
 
 commands:
   broadcast:
-    description: "Sende alle Spieler einen broadcast"
+    description: "Send every Player on your Server a Message"
     permission: broadcast.cmd
 permissions:
    broadcast.cmd:
