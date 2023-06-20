@@ -1,7 +1,7 @@
 name: SimplerBroadcaster
 version: 1.0.0
 main: DerCommander610\Broadcast\Main
-api: [4.17.0]
+api: [5.1.2]
 
 commands:
   broadcast:
