@@ -7,7 +7,7 @@ use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
-use jojoe77777\FormAPI;
+use DerCommander610\FormAPI\CustomForm;
 
 class Main extends PluginBase implements Listener {
 
@@ -33,39 +33,41 @@ class Main extends PluginBase implements Listener {
     }
 
     public function broadcast($player){
-        $api = $this->getServer()->getPluginManager()->getPlugin("FormAPI");
-        $form = $api->createCustomForm(function (Player $player, array $data = null){
-            if($data === null){
+        $form = new CustomForm(function (Player $player, array $data = null){
+            if(!isset($data)){
                 return true;
             }
-            if($data[0] == null){
+            if(!isset($data[0])){
                 $player->sendMessage("§cYou need to write a Message to send it to all Players!");
                 return true;
             }
-            if($data[1] == true) {
+            if($data[1] == "§aGreen") {
                 $this->getServer()->broadcastMessage("§6Server>> §a$data[0]");
                 return true;
             }
-            if($data[2] == true){
+            if($data[1] == "§bBlue"){
                 $this->getServer()->broadcastMessage("§6Server>> §b$data[0]");
                 return true;
             }
-            if($data[3] == true){
-                $this->getServer()->broadcastMessage("§6Server>> §c$data[0]");
+            if($data[1] == "§cRed"){
+                $this->getServer()->broadcastMessage("§6Server>> §c" . $data[0]);
                 return true;
             }
-            if($data[4] == true){
-                $this->getServer()->broadcastMessage("§6Server>> §e$data[0]");
+            if($data[1] == "§eYellow"){
+                $this->getServer()->broadcastMessage("§6Server>> §e" . $data[0]);
                 return true;
             }
-            $this->getServer()->broadcastMessage("§6Server>> ");
+            if($data[1) == "§6Orange"){
+                $this->getServer()->broadcastMessage("§6Server>> §6" . $data[0]);
+                return true;
+            }
+            if(!isset($data[1])){
+                $this->getServer()->broadcastMessage("§6Server>> §f" - §data[0])
+            }
         });
         $form->setTitle($this->getConfig()->get("title"));
         $form->addInput("§a>> §bWrite a Message!");
-        $form->addToggle("§aGreen", false);
-        $form->addToggle("§bBlue", false);
-        $form->addToggle("§cRed", false);
-        $form->addToggle("§eYellow", false);
+        $form->addDropDown("§aTake an Color Option!", ["§aGreen", "§bBlue", "§cRed", "§eYellow", "§6Orange"])
         $form->sendToPlayer($player);
         return $form;
     }
