@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace DerCommander610\Lobby\Core\FormAPI;
+namespace DerCommander610\FormAPI;
 
 use pocketmine\form\FormValidationException;
 
