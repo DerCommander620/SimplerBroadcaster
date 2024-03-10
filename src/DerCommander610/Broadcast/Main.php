@@ -42,11 +42,11 @@ class Main extends PluginBase implements Listener {
                 return true;
             }
             if($data[1] == "§aGreen") {
-                $this->getServer()->broadcastMessage("§6Server>> §a$data[0]");
+                $this->getServer()->broadcastMessage("§6Server>> §a" . $data[0]);
                 return true;
             }
             if($data[1] == "§bBlue"){
-                $this->getServer()->broadcastMessage("§6Server>> §b$data[0]");
+                $this->getServer()->broadcastMessage("§6Server>> §b" . $data[0]);
                 return true;
             }
             if($data[1] == "§cRed"){
@@ -62,7 +62,7 @@ class Main extends PluginBase implements Listener {
                 return true;
             }
             if(!isset($data[1])){
-                $this->getServer()->broadcastMessage("§6Server>> §f" - §data[0])
+                $this->getServer()->broadcastMessage("§6Server>> §f" . §data[0])
             }
         });
         $form->setTitle($this->getConfig()->get("title"));
