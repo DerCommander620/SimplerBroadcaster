@@ -62,7 +62,7 @@ class Main extends PluginBase implements Listener {
                 return true;
             }
             if(!isset($data[1])){
-                $this->getServer()->broadcastMessage("§6Server>> §f" . §data[0]);
+                $this->getServer()->broadcastMessage("§6Server>> §f" . $data[0]);
             }
         });
         $form->setTitle($this->getConfig()->get("title"));
