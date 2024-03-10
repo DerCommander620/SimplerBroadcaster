@@ -32,7 +32,7 @@ class Main extends PluginBase implements Listener {
     return true;
     }
 
-    public function broadcast($player){
+    public function broadcast(Player $player){
         $form = new CustomForm(function (Player $player, array $data = null){
             if(!isset($data)){
                 return true;
