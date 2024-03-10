@@ -57,7 +57,7 @@ class Main extends PluginBase implements Listener {
                 $this->getServer()->broadcastMessage("§6Server>> §e" . $data[0]);
                 return true;
             }
-            if($data[1) == "§6Orange"){
+            if($data[1] == "§6Orange"){
                 $this->getServer()->broadcastMessage("§6Server>> §6" . $data[0]);
                 return true;
             }
